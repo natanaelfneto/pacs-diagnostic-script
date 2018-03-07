@@ -3,10 +3,10 @@
 ## Setting PACS_CONFIG directory variable
 PACSD_CONFIG="$(dirname "$0")";
 # Setting HELP
-PACSD_HELP="usage: pacs [options] [arg]
-example: [pacs -h] will return this message.
+PACSD_HELP="usage: pacs [ options ] [ arg ]
+example: [ pacs -h ] will return this message.
 obs: only one option will be accepted.\n
- -d [arg]\truns a diagnose script for specific package or all
+ -d [ arg ]\truns a diagnose script for specific package or all
 \t\tof packages for a LAIS/PACS environment.\n
  -h\t\tbrings pacsd help message output to the console.\n
  -v\t\tbrings pacsd version output to the console.";

@@ -33,11 +33,11 @@ _enjoy_
 ## Usage
 _this messagem can also be found with_ **pacsd -h** _command line_
 ```
-usage: pacs [options] [arg]
-example: [pacs -h] will return this message.
+usage: pacs [ options ] [ arg ]
+example: [ pacs -h ] will return this message.
 obs: only one option will be accepted.
 
- -d [arg]	runs a diagnose script for specific package or all
+ -d [ arg ]	runs a diagnose script for specific package or all
  		of packages for a LAIS/PACS environment.
 
  -h		brings pacsd help message output to the console.

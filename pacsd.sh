@@ -54,13 +54,14 @@ function pre_run () {
 
 ## Function to be called after a pre run script with pacsd command main steps
 function main {
-	if [[ $1 ]]; then eval $1 $2; else echo -e "\nError:\tEmpty function called.\n"; fi;
+	if [[ $1 ]]; then eval $1 $2; else echo -e "\nError:\tEmpty function called.\n"; help; fi;
 }
 #check if its the first run of this file
-if [[ -f $PACSD_HOME/__init__ ]]; then
-	pre_run $@;
-	main $FUNCTION $ARG;
-else
+if [[ ! -f $PACSD_HOME/__init__ ]]; then
 	touch "$PACSD_HOME/__init__";
 	welcome;
+	help;
 fi
+
+pre_run $@;
+main $FUNCTION $ARG;
