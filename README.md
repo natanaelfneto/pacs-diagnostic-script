@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <a href="#">
     <img alt="picture_archiving_and_communication_system-diagnostic-script-logo" src="https://raw.githubusercontent.com/natanaelfneto/pacs-diagnostic-script/master/assets/img/pacsd-image-logo.png" width="240"/>
   </a>
