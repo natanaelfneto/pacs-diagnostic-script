@@ -8,11 +8,11 @@ This **PACS Diagnostic Module** was based on the routine steps for checking a PA
 For more information about PACS, check the wikipedia about it at [wikipedia.org](https://en.wikipedia.org/wiki/Picture_archiving_and_communication_system)
 ***
 # Table of Contents
-* [Getting Started](#getting-started)\
-    * [Clone/Download the repository](#clonedownload-the-repository)\
-		* [Installation process](#installation-process)\
-		* [Usage](#usage)\
-* [License](#license)\
+* [Getting Started](#getting-started)
+		* [Clone/Download the repository](#clonedownload-the-repository)
+		* [Installation process](#installation-process)
+		* [Usage](#usage)
+* [License](#license)
 ***
 ## Getting Started
 ### Via Linux Bash
