@@ -29,12 +29,10 @@ PACSD_PKGS="$PACSD_HOME/scripts/bash/supported_packages";
 
 ## Function to be called before pacsd main script with pre run steps
 function pre_run () {
-	# output variable with all diagnosed parameters
-	declare -a params=("command" "directory" "variable");
 	# output variable with all diagnosed packages names
 	declare -a diagnosed;
 	# output variable with all diagnosed packages outputs
-	declare -A output_arr=();
+	declare -a output_arr;
 	# : before means it passes without arguments
 	# : after means it accepts arguments
 	while getopts d:hv option; do

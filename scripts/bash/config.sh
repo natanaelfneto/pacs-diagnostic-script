@@ -11,5 +11,7 @@ obs: only one option will be accepted.\n
 \t\tmissing package and sets all its configurations.\n
  -d [option]\truns a diagnore script for specific package or all
 \t\tof packages for a LAIS/PACS environment.";
+##
+declare -a PACSD_PARAMS=("command" "directory" "variable")
 ## Setting VERSION variable
 PACSD_VERSION="0.0.1";

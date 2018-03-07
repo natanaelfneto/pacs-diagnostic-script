@@ -26,10 +26,13 @@ function diagnose () {
 		*)
 		printf '\nError:\tThe package named "%s" is not supported by pacsd-diagnostic module\n' "$1";;
 	esac
+		declare -a params=(${PACSD_PARAMS[@]});
+		echo "runnig diagnostic for packages: [ ${diagnosed[@]} ]"
 		for pkg in ${diagnosed[@]}; do
-			printf 'diagnostic for %s package:\n\n' "$pkg";
-			printf '%s %s' "${params[0]}" #"${output_arr[$pkg,${params[0]}]}";
-			# printf '\t>%s status:\t%s\n' "${params[1]}" "${output_arr[$pkg,${params[1]}]}";
-			# printf '\t>%s status:\t%s\n' "${params[2]}" "${output_arr[$pkg,${params[2]}]}";
+			printf '\ndiagnostic for %s package:\n\n' "$pkg";
+			for p in ${!params[@]}; do
+				local status="${output_arr[$p]/$pkg-${params[$p]}-/}";
+				printf "\t%s %s status:\t[ %s ]\n" "$pkg" "${params[$p]}" "$status";
+			done
 		done
 }
