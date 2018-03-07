@@ -7,7 +7,7 @@ function diagnose_java () {
 	else command="MISSING";
 	fi;
 	#java directory
-	if [[ -d '$(dirname $(readlink -f $(which javac)))' ]]; then
+	if [[ -d $(dirname $(readlink -f $(which javac))) ]]; then
 		directory="OK";
 	else directory="MISSING";
 	fi;
