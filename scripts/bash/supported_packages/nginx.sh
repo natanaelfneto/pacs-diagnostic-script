@@ -38,5 +38,5 @@ function diagnose_nginx () {
 	#add package to the list as diagnosed
 	diagnosed=("${diagnosed[@]}" "$this_pkg");
 	#reset used variables to avoid errors with other packages
-	reset reset command directory installed service this_pkg;
+	reset command directory installed service this_pkg;
 }

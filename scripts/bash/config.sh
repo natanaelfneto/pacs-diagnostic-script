@@ -27,6 +27,14 @@ declare -a PACSD_PARAMS=(
 	"installed"
 	"service"
 	)
+## PACSD supported packages variable
+declare -a PACSD_PKGS_ARR=(
+	# "all"
+	"java"
+	"nginx"
+	"postgres"
+	"postgresql"
+)
 ## Setting VERSION variable
 PACSD_VERSION="0.0.2";
 PACSD_WELCOME="**welcome message**";
