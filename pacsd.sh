@@ -30,6 +30,8 @@ PACSD_PKGS="$PACSD_HOME/scripts/bash/supported_packages";
 	. "$PACSD_PKGS/java.sh";
 	### nginx package
 	. "$PACSD_PKGS/nginx.sh";
+	### postgresql package
+	. "$PACSD_PKGS/postgresql.sh";
 }
 
 ## Function to be called before pacsd main script with pre run steps
@@ -57,7 +59,7 @@ function pre_run () {
 
 ## Function to be called after a pre run script with pacsd command main steps
 function main {
-	if [[ $1 ]]; then eval $1 $2; else echo -e "\nError:\tEmpty function called.\n"; help; fi;
+	if [[ $1 ]]; then eval $1 $2; else echo -e "\n${ERROR}\t${RED}Empty function called.${NoColor}\n"; help; fi;
 }
 #check if its the first run of this file
 if [[ ! -f $PACSD_HOME/__init__ ]]; then

@@ -1,32 +1,39 @@
 #!/bin/bash
 # Function to select which package user wants a diagnosis output
 function diagnose () {
-	case "${1}"	in
-		all)
-		diagnose_java;
-		diagnose_nginx;;
+	if [[ ! "${supported_packages[@]}" = ${1} ]]; then
+		printf "${UNSUPPORTED_PACKAGE}";
+		help;
+		exit;
+	else
+		case "${1}"	in
+			all)
+			diagnose_java;
+			diagnose_nginx;
+			diagnose_postgresql;;
 
-		# dcm4chee)
-		# diagnose_;;
+			# dcm4chee)
+			# diagnose_;;
 
-		java)
-		diagnose_java;;
+			java)
+			diagnose_java;;
 
-		nginx)
-		diagnose_nginx;;
-		#
-		# opentd)
-		# diagnose_opentd;;
-		#
-		# postgres)
-		# diagnose_postgres;;
-		#
-		# postgresql)
-		# diagnose_postgresql;;
+			nginx)
+			diagnose_nginx;;
+			#
+			# opentd)
+			# diagnose_opentd;;
+			#
+			postgres)
+			diagnose_postgresql;;
+			#
+			postgresql)
+			diagnose_postgresql;;
 
-		*)
-		printf '\nError:\tThe package named "%s" is not supported by pacsd-diagnostic module\n' "$1";;
-	esac
+			*)
+			printf "${UNSUPPORTED_PACKAGE}";;
+		esac
+		# output script (will e updated to function in future version)
 		declare -a params=(${PACSD_PARAMS[@]});
 		echo "runnig diagnostic for packages: [ ${diagnosed[@]} ]"
 		for pkg in ${diagnosed[@]}; do
@@ -38,4 +45,5 @@ function diagnose () {
 				fi
 			done
 		done
+	fi
 }

@@ -5,6 +5,7 @@
 </p>
 
 This **PACS Diagnostic Module** was based on the routine steps for checking a PACS Server status:\
+Version: **0.0.2**
 For more information about PACS, check the wikipedia about it at [wikipedia.org](https://en.wikipedia.org/wiki/Picture_archiving_and_communication_system)
 ***
 # Table of Contents
@@ -33,9 +34,9 @@ _enjoy_
 ## Usage
 _this messagem can also be found with_ **pacsd -h** _command line_
 ```
-usage: pacs [ options ] [ arg ]
-example: [ pacs -h ] will return this message.
-obs: only one option will be accepted.
+usage:		pacs [ options ] [ arg ]
+example:		[ pacs -h ] will return this message.
+obs:		only one option will be accepted.
 
  -d [ arg ]	runs a diagnose script for specific package or all
  		of packages for a LAIS/PACS environment.

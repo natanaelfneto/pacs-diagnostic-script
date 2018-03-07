@@ -1,26 +1,35 @@
 #!/bin/bash
-# Function to output diagnose for java package
-function diagnose_java () {
-	this_pkg="java";
-	#java commnad line
-	if [[ `command -v java` ]]; then
+# Function to output diagnose for postgresql package
+function diagnose_postgresql () {
+	this_pkg="postgresql";
+	#postgresql commnad line
+	if [[ `command -v postgres` ]]; then
 		command="OK";
 	else
 		command="MISSING";
 	fi;
-	#java directory
-	if [[ -d $(dirname $(readlink -f $(which javac))) ]]; then
+	#postgresql directory
+	if [[ -f /usr/bin/postgres ]]; then
 		directory="OK";
 	else
 		directory="MISSING";
 	fi;
-	#java installed
-	if which java > /dev/null 2>&1; then
+	#postgresql installed
+	if which postgres > /dev/null 2>&1; then
 		installed="OK";
 	else
 		installed="MISSING";
 	fi
-	#java service
+	#postgresql service
+	if [[ `service postgresql status | grep "active (running)"` ]]; then
+		service="ACTIVE";
+	else
+		if [[ `/sbin/service postgresql status | grep "active (running)"` ]]; then
+			service="ACTIVE";
+		else
+			service="INACTIVE";
+		fi;
+	fi;
 	#add result of diagnosis in the global output array;
 	output_arr=("${output_arr[@]}" "$this_pkg-command-$command");
 	output_arr=("${output_arr[@]}" "$this_pkg-directory-$directory");
