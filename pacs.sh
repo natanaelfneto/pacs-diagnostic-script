@@ -52,7 +52,7 @@ function pre_run () {
 
 ## Function to be called after a pre run script with pacsd command main steps
 function main {
-	if [[ $1 ]]; then eval $1 $2; else echo "error empty function"; fi;
+	if [[ $1 ]]; then eval $1 $2; else echo "Erros:\tEmpty function called."; fi;
 }
 
 pre_run $@;
