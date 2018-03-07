@@ -38,11 +38,11 @@ example: [pacs -h] will return this message.
 obs: only one option will be accepted.
 
  -d [option]	runs a diagnose script for specific package or all
- 							of packages for a LAIS/PACS environment.
+ 		of packages for a LAIS/PACS environment.
 
- -h 					brings pacsd help message output to the console.
+ -h		brings pacsd help message output to the console.
 
- -v						brings pacsd version output to the console.
+ -v		brings pacsd version output to the console.
 ```
 ## License
 MIT License
