@@ -21,6 +21,8 @@ PACSD_PKGS="$PACSD_HOME/scripts/bash/supported_packages";
 . "$PACSD_BASH/reset.sh"
 ## Import function to output pacs command version
 . "$PACSD_BASH/version.sh"
+## Import function to output pacs command welcome
+. "$PACSD_BASH/welcome.sh"
 
 ## Import for the supported packages
 {
@@ -55,10 +57,10 @@ function main {
 	if [[ $1 ]]; then eval $1 $2; else echo -e "\nError:\tEmpty function called.\n"; fi;
 }
 #check if its the first run of this file
-if [[ -d $(dirname $HOME/bin/pacs-diagnostic-script/__init__) ]]; then
+if [[ -f $PACSD_HOME/__init__ ]]; then
 	pre_run $@;
 	main $FUNCTION $ARG;
 else
-	touch $HOME/bin/pacs-diagnostic-script/__init__;
-	wellcome;
+	touch "$PACSD_HOME/__init__";
+	welcome;
 fi
