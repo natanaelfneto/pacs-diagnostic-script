@@ -18,7 +18,7 @@ For more information about PACS, check the wikipedia about it at [wikipedia.org]
 #### Installation Process
 _installation is still under development, to make it work_
 _clone or download the repository_
-```ShellScript
+```Shell
 git clone https://github.com/natanaelfneto/pacs-diagnostic-script.git;
 ```
 _add the following commands lines inside your ~/.bashrc file instead_
