@@ -3,7 +3,8 @@
 function diagnose () {
 	case "${1}"	in
 		all)
-		diagnose_java;;
+		diagnose_java;
+		diagnose_nginx;;
 
 		# dcm4chee)
 		# diagnose_;;
@@ -11,8 +12,8 @@ function diagnose () {
 		java)
 		diagnose_java;;
 
-		# nginx)
-		# diagnose_nginx;;
+		nginx)
+		diagnose_nginx;;
 		#
 		# opentd)
 		# diagnose_opentd;;
@@ -32,7 +33,9 @@ function diagnose () {
 			printf '\ndiagnostic for %s package:\n\n' "$pkg";
 			for p in ${!params[@]}; do
 				local status="${output_arr[$p]/$pkg-${params[$p]}-/}";
-				printf "\t%s %s status:\t[ %s ]\n" "$pkg" "${params[$p]}" "$status";
+				if [[ "${output_arr[$p]}" = $pkg* ]]; then
+				  printf "\t%s %s status:\t[ %s ]\n" "$pkg" "${params[$p]}" "$status";
+				fi
 			done
 		done
 }

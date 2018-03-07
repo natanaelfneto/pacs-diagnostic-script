@@ -26,7 +26,10 @@ PACSD_PKGS="$PACSD_HOME/scripts/bash/supported_packages";
 
 ## Import for the supported packages
 {
+	### java package
 	. "$PACSD_PKGS/java.sh";
+	### nginx package
+	. "$PACSD_PKGS/nginx.sh";
 }
 
 ## Function to be called before pacsd main script with pre run steps

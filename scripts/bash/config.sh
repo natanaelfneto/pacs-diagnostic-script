@@ -11,7 +11,7 @@ obs: only one option will be accepted.\n
  -h\t\tbrings pacsd help message output to the console.\n
  -v\t\tbrings pacsd version output to the console.";
 ##
-declare -a PACSD_PARAMS=("command" "directory" "variable")
+declare -a PACSD_PARAMS=("command" "directory" "variable" "installed" "service")
 ## Setting VERSION variable
 PACSD_VERSION="0.0.1";
 PACSD_WELCOME="**welcome message**";
