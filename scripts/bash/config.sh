@@ -6,11 +6,10 @@ PACSD_CONFIG="$(dirname "$0")";
 PACSD_HELP="usage: pacs [options] [args]
 example: [pacs -h] will return this message.
 obs: only one option will be accepted.\n
- -h \t\tbrings pacs command help output to the console.\n
- -i [option]\tcalls script to install/reinstall a LAIS/PACS environment
-\t\tmissing package and sets all its configurations.\n
- -d [option]\truns a diagnore script for specific package or all
-\t\tof packages for a LAIS/PACS environment.";
+ -d [option]\truns a diagnose script for specific package or all
+\t\tof packages for a LAIS/PACS environment.\n
+ -h\t\tbrings pacsd help message output to the console.\n
+ -v\t\tbrings pacsd version output to the console.";
 ##
 declare -a PACSD_PARAMS=("command" "directory" "variable")
 ## Setting VERSION variable
