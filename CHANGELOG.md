@@ -12,12 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 #### Added
 - Project folder structure
 - basic functions: {
-	configuration
-	diagnose
-	help
-	reset
-	version
-	welcome
+	configuration: common variables to be used across functions,
+	diagnose: select which package user wants a diagnosis output,
+	help: output help message,
+	reset: unset internal variables and avoid script errors,
+	version: output module version,
+	welcome: output welcome message,
 }
 
 ### 0.0.0 - 2018-03-06
