@@ -4,19 +4,24 @@
   </a>
 </p>
 
-This **PACS Diagnostic Module** was based on the steps of the routine checks for a PACS Server:\
+This **PACS Diagnostic Module** was based on the routine steps for checking a PACS Server status:\
 For more information about PACS, check the wikipedia about it at [wikipedia.org](https://en.wikipedia.org/wiki/Picture_archiving_and_communication_system)
 ***
 # Table of Contents
 * [Getting Started](#getting-started)
     * [Clone/Download the repository](#clonedownload-the-repository)
+		* [Run installation command](#run-installation-command)
 * [License](#license)
 ***
 ## Getting Started
 ### Via Linux Bash
 #### Clone/Download the repository
-```PowerShell
+```ShellSession
 git clone https://github.com/natanaelfneto/pacs-diagnostic-script.git;
+```
+#### Run installation commands
+```ShellSession
+
 ```
 ***
 ## License

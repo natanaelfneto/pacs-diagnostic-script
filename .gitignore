@@ -308,7 +308,7 @@ PublishScripts/
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
-**/packages/*
+
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
@@ -477,52 +477,3 @@ jboss/server/minimal/work/**/*
 # deployed package files #
 
 *.DEPLOYED
-
-### JBoss-4-2-3-GA ###
-/server/all/data
-/server/all/log
-/server/all/tmp
-/server/all/work
-/server/default/data
-/server/default/log
-/server/default/tmp
-/server/default/work
-/server/minimal/data
-/server/minimal/log
-/server/minimal/tmp
-/server/minimal/work
-/server/default/deploy/*.xml.failed
-/server/default/deploy/*.war.failed
-
-/**
-* For ignore * .war, * .war.failed and * .xml.failed if you use other directories of jboss.
-* Do it similar configuration used for
-* /server/default/deploy
-*
-*/
-
-### JBoss-6-x ###
-/server/jbossweb-standalone/data
-/server/jbossweb-standalone/log
-/server/jbossweb-standalone/tmp
-/server/jbossweb-standalone/work
-/server/standard/data
-/server/standard/log
-/server/standard/tmp
-/server/standard/work
-/server/default/deploy/*.jar.failed
-/server/default/deploy/*.jar.dodeploy
-/server/default/deploy/*.xml.dodeploy
-/server/default/deploy/*.war.dodeploy
-
-/*
-*Important
-* Case your directory for example
-* /server/minimal/lib be empty.
-* The git will not submit this directory for you repository.
-* In this case is necessary create one archive, for example .gitignore empty in this directory.
-* Case you run your server without this directory the server will faild when you start service.
-
-
-
-# End of https://www.gitignore.io/api/jboss,jboss-6-x,jboss-4-2-3-ga

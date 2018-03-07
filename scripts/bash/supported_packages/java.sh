@@ -7,14 +7,14 @@ function diagnose_java () {
 	else command="MISSING";
 	fi;
 	#java directory
-	if [[ '-d $(dirname $(readlink -f $(which javac)))' ]]; then
+	if [[ -d '$(dirname $(readlink -f $(which javac)))' ]]; then
 		directory="OK";
 	else directory="MISSING";
 	fi;
 	#java environment variable
-	if [[ '-z $JAVA_HOME' ]]; then
+	if [[ -z '$JAVA_HOME' ]]; then
 		variable="OK";
-	else variable="MISSING"; 
+	else variable="MISSING";
 	fi;
 	#add result of diagnosis in the global output array;
 	output_arr=("${output_arr[@]}" "java-command-$command");

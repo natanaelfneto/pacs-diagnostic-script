@@ -52,8 +52,16 @@ function pre_run () {
 
 ## Function to be called after a pre run script with pacsd command main steps
 function main {
-	if [[ $1 ]]; then eval $1 $2; else echo "Erros:\tEmpty function called."; fi;
+	if [[ $1 ]]; then eval $1 $2; else echo -e "\nError:\tEmpty function called.\n"; fi;
 }
-
-pre_run $@;
-main $FUNCTION $ARG;
+#check if its the first run of this file
+if [[ -d $(dirname $HOME/bin/pacs-diagnostic-script/__init__) ]]; then
+	pre_run $@;
+	main $FUNCTION $ARG;
+else
+	export PATH=$PATH":$HOME/bin/pacs-diagnostic-script";
+	chmod +x $HOME/bin/pacs-diagnostic-script/;
+	alias pacsd='sh $HOME/bin/pacs-diagnostic-script/pacs.sh';
+	touch $HOME/bin/pacs-diagnostic-script/__init__;
+	wellcome;
+fi
