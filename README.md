@@ -17,8 +17,9 @@ For more information about PACS, check the wikipedia about it at [wikipedia.org]
 ### Via Linux Bash
 #### Installation Process
 _installation is still under development, to make it work_
-_clone or download the repository_
+_clone or download the repository at_
 ```Shell
+cd $HOME/bin/
 git clone https://github.com/natanaelfneto/pacs-diagnostic-script.git;
 ```
 _add the following commands lines inside your ~/.bashrc file instead_
@@ -26,10 +27,6 @@ _add the following commands lines inside your ~/.bashrc file instead_
 export PATH=$PATH":$HOME/bin/pacs-diagnostic-script";
 chmod +x $HOME/bin/pacs-diagnostic-script/;
 alias pacsd='sh $HOME/bin/pacs-diagnostic-script/pacs.sh';
-```
-_also, make sure that you have cloned the module inside this specific folder:_
-```Shell
-$HOME/bin/
 ```
 _enjoy_
 ***
