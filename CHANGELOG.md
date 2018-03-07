@@ -10,16 +10,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### 0.0.1 - 2018-03-06
 #### Added
-- Project folder structure
+- project folder structure
+- system supported: {
+	-linux/centos7,
+}
 - basic functions: {
-	configuration: common variables to be used across functions,
-	diagnose: select which package user wants a diagnosis output,
-	help: output help message,
-	reset: unset internal variables and avoid script errors,
-	version: output module version,
-	welcome: output welcome message,
+	- configuration: common variables to be used across functions,
+	- diagnose: select which package user wants a diagnosis output,
+	- help: output help message,
+	- reset: unset internal variables and avoid script errors,
+	- version: output module version,
+	- welcome: output welcome message,
+}
+- supported packages: {
+	- java,
 }
 
 ### 0.0.0 - 2018-03-06
 #### Added
-- Project created
+- project created
