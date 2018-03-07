@@ -59,9 +59,6 @@ if [[ -d $(dirname $HOME/bin/pacs-diagnostic-script/__init__) ]]; then
 	pre_run $@;
 	main $FUNCTION $ARG;
 else
-	export PATH=$PATH":$HOME/bin/pacs-diagnostic-script";
-	chmod +x $HOME/bin/pacs-diagnostic-script/;
-	alias pacsd='sh $HOME/bin/pacs-diagnostic-script/pacs.sh';
 	touch $HOME/bin/pacs-diagnostic-script/__init__;
 	wellcome;
 fi

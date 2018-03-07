@@ -15,4 +15,4 @@ obs: only one option will be accepted.\n
 declare -a PACSD_PARAMS=("command" "directory" "variable")
 ## Setting VERSION variable
 PACSD_VERSION="0.0.1";
-PACSD_WELLCOME="**wellcome message**";
+PACSD_WELCOME="**welcome message**";
