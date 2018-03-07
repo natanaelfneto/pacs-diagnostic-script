@@ -9,19 +9,18 @@ For more information about PACS, check the wikipedia about it at [wikipedia.org]
 ***
 # Table of Contents
 * [Getting Started](#getting-started)
-    * [Clone/Download the repository](#clonedownload-the-repository)
     * [Installation process](#installation-process)
     * [Usage](#usage)
 * [License](#license)
 ***
 ## Getting Started
 ### Via Linux Bash
-#### Clone/Download the repository
+#### Installation Process
+_installation process still under development, to make ir work_
+_clone or download the repository_
 ```ShellSession
 git clone https://github.com/natanaelfneto/pacs-diagnostic-script.git;
 ```
-#### Installation process
-_installation process still under development, to make ir work_
 _add the following commands lines inside your ~/.bashrc file instead_
 ```ShellSession
 export PATH=$PATH":$HOME/bin/pacs-diagnostic-script";
