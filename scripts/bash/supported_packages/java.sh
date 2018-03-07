@@ -21,6 +21,7 @@ function diagnose_java () {
 		installed="MISSING";
 	fi
 	#java service
+	service="NOT APPLY";
 	#add result of diagnosis in the global output array;
 	output_arr=("${output_arr[@]}" "$this_pkg-command-$command");
 	output_arr=("${output_arr[@]}" "$this_pkg-directory-$directory");
